@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="leno">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Leno Motos</title>
+
+        <!-- Bootstrap -->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Custom Theme Style -->
+        <link href="css/custom.min.css" rel="stylesheet">
+       
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <div ng-include src="'partials/leftMenu.html'"></div>
+                <div ng-include src="'partials/topMenu.html'"></div>
+                <div class="ng-view"></div>
+                <footer>
+                  <div class="clearfix"></div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- AngularJS -->
+        <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+
+        <!-- Main APP -->
+        <script src="js/main.js"></script>
+
+        <!-- Controllers APP -->
+        <script src="js/angular/controllers/vendas.js"></script>
+
+         <!-- Services APP -->
+        <script src="js/angular/services/serverRequest.js"></script>
+
+        <!-- Custom Theme Scripts -->
+        <script src="js/custom.min.js"></script>
+       
+    </body>
+</html>
