@@ -5,7 +5,7 @@
 
 'use strict';
 
-app.controller('vendasController', ['$scope','serverRequest', function ($scope, serverRequest) {
+app.controller('vendasController', ['$scope','serverRequest','redirectRequest', 'globalVariable', function ($scope, serverRequest, redirectRequest, globalVariable) {
 	$scope.vendas = [];
 	$scope.nome = "Todas as vendas";
 
@@ -14,5 +14,10 @@ app.controller('vendasController', ['$scope','serverRequest', function ($scope, 
 	},function (){
 		$scope.vendas = [];
 	});
+
+	$scope.detalharVenda = function(idvenda){
+		globalVariable.idvenda = idvenda;
+		redirectRequest.detalharVenda();
+	}
 
 }]);

@@ -30,9 +30,9 @@
                     <td class=" ">{{$index + 1}}</td>
                     <td class=" ">{{venda.data}}</td>
                     <td class=" ">{{venda.itens}}</td>
-                    <td class=" ">{{venda.nome}}</td>
-                    <td class="a-right a-right ">{{venda.valor}}</td>
-                    <td class=" last"><a ng-click="showItens(venda.cpfcliente,venda.idcompra)" href="#">Ver detalhes</a>
+                    <td class=" ">{{venda.nomecliente}}</td>
+                    <td class="a-right a-right ">{{venda.total}}</td>
+                    <td class=" last"><a ng-click="detalharVenda(venda.idcompra)" href="#!/detalharvenda">Ver detalhes</a>
                     <td class=" last"><a ng-click="cancelarCompra(venda.idcompra)" href="#">Cancelar</a>
                     </td>
                   </tr>

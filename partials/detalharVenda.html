@@ -1,0 +1,49 @@
+ <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Venda <small>detalhes da venda</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="form-group">
+                        <h2 class="control-label col-md-3 col-sm-3 col-xs-12"><b>Cliente:</b> {{cliente.nome}}</h2>
+                        <h2 class="control-label col-md-3 col-sm-3 col-xs-12"><b>Venda:</b> {{venda.idcompra}}</h2>
+                        <h2 class="control-label col-md-3 col-sm-3 col-xs-12"><b>Quantidade de itens:</b> {{venda.itens}}</h2>
+                        <h2 class="control-label col-md-3 col-sm-3 col-xs-12"><b>Total:</b> R$ {{venda.total}}</h2>
+                        <h2 class="control-label col-md-3 col-sm-3 col-xs-12"><b>Data:</b> {{venda.data}}</h2>
+                        <h2 class="control-label col-md-12 col-sm-12 col-xs-12"><b>Lista de Itens comprados</b></h2>
+                      </div>
+                      </div>
+
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title">Código </th>
+                            <th class="column-title">Descrição </th>
+                            <th class="column-title">Quantidade </th>
+                            <th class="column-title">Valor </th>
+                            <th class="column-title">Total</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="even pointer" ng-repeat="item in listaProdutos">
+                            <td class=" ">{{item.codigodebarras}}</td>
+                            <td class=" ">{{item.nome}}</td>
+                            <td class=" ">{{item.quantidade}}</td>
+                            <td class=" ">{{item.preco}}</td>
+                            <td class=" ">{{item.total}}</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </div>

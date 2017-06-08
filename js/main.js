@@ -10,10 +10,10 @@ var app = angular.module('leno', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
 
   $routeProvider
-  	.when('/menu', {
-      	templateUrl   : 'partials/menu.html',
-      	title         : 'League of Sounds Início',
-     	  controller    : 'testeController'
+  	.when('/detalharvenda', {
+      	templateUrl   : 'partials/detalharVenda.html',
+      	title         : 'Detalhes da venda',
+     	  controller    : 'detalharVendaController'
     })
     .when('/', {
       	templateUrl   : 'partials/vendas.html',
@@ -26,7 +26,16 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 app.constant('LenoApiUrl',{
-  LIST_VENDAS     : "compra/"
+  LIST_VENDA          : "compra/",
+  LIST_CLIENTE        : "cliente/",
+  LIST_PRODUTO_COMPRA : "produto/compra/",
 });
 
 app.constant('LINK_API', 'http://localhost:8080/');
+
+app.factory('globalVariable', function() {
+  return {
+      idvenda   : undefined,
+      idcliente : undefined
+  };
+});

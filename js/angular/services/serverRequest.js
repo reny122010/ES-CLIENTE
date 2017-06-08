@@ -9,7 +9,10 @@ serverRequest.$inject = ['$http','$q','LenoApiUrl','LINK_API'];
 
 function serverRequest($http, $q, LenoApiUrl, LINK_API){
 	return({
-		listaVendas : listaVendas
+		listaVendas : listaVendas,
+		listaVenda  : listaVenda,
+		listaCliente: listaCliente,
+		listaProdutoCompra : listaProdutoCompra
 	});
 
 	function getRequest(route){
@@ -25,6 +28,18 @@ function serverRequest($http, $q, LenoApiUrl, LINK_API){
 	};
 
     function listaVendas(){
-    	return getRequest(LINK_API+LenoApiUrl.LIST_VENDAS);
+    	return getRequest(LINK_API+LenoApiUrl.LIST_VENDA);
     };
+
+    function listaVenda(idvenda){
+    	return getRequest(LINK_API+LenoApiUrl.LIST_VENDA+idvenda+'/');
+    }
+
+    function listaCliente(idcliente){
+    	return getRequest(LINK_API+LenoApiUrl.LIST_CLIENTE+idcliente+'/');
+    }
+
+    function listaProdutoCompra(idcompra){
+    	return getRequest(LINK_API+LenoApiUrl.LIST_PRODUTO_COMPRA+idcompra+'/');
+    }
 }
