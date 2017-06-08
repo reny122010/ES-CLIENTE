@@ -8,7 +8,11 @@
 app.controller('vendasController', ['$scope','serverRequest', function ($scope, serverRequest) {
 	$scope.vendas = [];
 	$scope.nome = "Todas as vendas";
-	
-	$scope.vendas = serverRequest.listaVendas();
+
+	serverRequest.listaVendas().then(function (success){
+        $scope.vendas = success.data;
+	},function (){
+		$scope.vendas = [];
+	});
 
 }]);

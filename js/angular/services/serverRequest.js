@@ -21,13 +21,7 @@ function serverRequest($http, $q, LenoApiUrl, LINK_API){
 			   	'Content-Type': "application/json"
 			}
 		};
- 		$http(request)
-        .then(function (success){
-        	return success;
-		},function (error){
-			console.log(error);
-			return [];
-		});
+ 		return $http(request);
 	};
 
     function listaVendas(){
